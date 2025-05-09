@@ -1,4 +1,4 @@
-# Arquivos e pastas de backup temporário
+# Arquivos e pastas de backup temporÃ¡rio
 *.log
 *.tmp
 *.bak
@@ -6,15 +6,15 @@
 *.swo
 *~
 
-# Configurações locais e sensíveis
+# ConfiguraÃ§Ãµes locais e sensÃ­veis
 .env
 
-# Pasta de dependências (caso use Composer ou NPM futuramente)
+# Pasta de dependÃªncias (caso use Composer ou NPM futuramente)
 vendor/
 node_modules/
 
-# Diretórios temporários de exercícios em sprints
-Sprint1/temp
+# DiretÃ³rios temporÃ¡rios de exercÃ­cios em sprints
+temp/
 
 # Ignora arquivos ocultos gerados pelo sistema
 .DS_Store
