@@ -1,4 +1,4 @@
-# Ejercicio 2 - Nivel 3
+Ejercicio 2 - Nivel 3
 
 Dado un array de strings, se devuelve un nuevo array solo con los que tienen una cantidad par de caracteres
 

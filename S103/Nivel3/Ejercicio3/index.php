@@ -1,6 +1,5 @@
 <?php
 $numeros = [2, 4, 5, 6, 7, 9, 10, 11, 13, 15];
-$sumaPrimos = 0;
 
 function esPrimo($n) {
     if ($n < 2) {
@@ -16,11 +15,9 @@ function esPrimo($n) {
     return true;
 }
 
-for ($i = 0; $i < count($numeros); $i++) {
-    if (esPrimo($numeros[$i])) {
-        $sumaPrimos += $numeros[$i];
-    }
-}
+$sumaPrimos = array_reduce($numeros, function($acum, $n) {
+    return esPrimo($n) ? $acum + $n : $acum;
+}, 0);
 
-echo "sumaPrimos = $sumaPrimos\n";
+echo "Suma de primos = $sumaPrimos\n";
 ?>
