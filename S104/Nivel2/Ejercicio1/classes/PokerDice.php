@@ -1,12 +1,10 @@
 <?php
     class PokerDice {
-        //encapsulamento
+        
         private $ultimaFigura;
 
-        //compartilhado por todos
         private static $figuras = ['As', 'K', 'Q', 'J', '7', '8'];
 
-        //compartilhado por todos
         private static $totalJogadas = 0;
 
         public function throw(){
@@ -14,7 +12,6 @@
 
             $this->ultimaFigura = self::$figuras[$indice];
 
-            // acessando classe diretamente
             self::$totalJogadas++;
         }
 

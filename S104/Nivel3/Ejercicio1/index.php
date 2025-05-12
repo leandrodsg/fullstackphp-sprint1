@@ -2,7 +2,6 @@
     require_once 'classes/Pelicula.php';
     require_once 'classes/Cinema.php';
 
-    // dados
     $p1 = new Pelicula("Inception", 148, "Christopher Nolan");
     $p2 = new Pelicula("Interstellar", 169, "Christopher Nolan");
     $p3 = new Pelicula("Tenet", 150, "Christopher Nolan");
@@ -24,8 +23,6 @@
     $cine1->mostrarPeliculas();
     $cine2->mostrarPeliculas();
 
-    // teste de error
-    // Per a cada cinema, mostrar la pel·lícula amb major duració ok
     $masLarga1 = $cine1->getPeliculaMasLarga();
     echo "Película más larga en {$cine1->getNombre()}:\n";
     if ($masLarga1) {
@@ -34,8 +31,6 @@
         echo "No hay películas registradas.\n";
     }
 
-    // teste de error
-    // Per a cada cinema, mostrar la pel·lícula amb major duració ok
     $masLarga2 = $cine2->getPeliculaMasLarga();
     echo "Película más larga en {$cine2->getNombre()}:\n";
     if ($masLarga2) {
@@ -44,20 +39,15 @@
         echo "No hay películas registradas.\n";
     }
 
-    // teste de duplicacao
-    // buscar todas as películas de um diretor sem repetir ok
-    // essa eh uma funcao de controle
     function buscarPeliculasPorDirector($director, $cines) {
         $encontradas = [];
 
         foreach ($cines as $cine) {
             foreach ($cine->getPeliculas() as $pelicula) {
-                //teste duplicado com nomes ok
+                
                 if ($pelicula->getDirector() === $director) {
-                    // verifica se foi adicionada pelo nome
                     $yaExiste = false;
 
-                    // teste se nome 3da nova pelicula com nomes que ja estao no array
                     foreach ($encontradas as $p) {
                         if ($p->getNombre() === $pelicula->getNombre()) {
                             $yaExiste = true;
