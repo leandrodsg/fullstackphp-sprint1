@@ -1,18 +1,21 @@
-Ejercicio 1 - Nivel 2
+Ejercicio 1 - Nivel 3
 
-La idea era crear una clase Shape como modelo para otras formas
-Shape recibe ancho y alto en el constructor
+Este ejercicio es una continuación del Ejercicio 1 del Nivel 2
+La idea era seguir usando la clase Shape y las subclases Triangle y Rectangle
+pero ahora con la forma círculo
 
-Como no tiene sentido calcular el área de una forma genérica
-hice que Shape sea una clase abstracta
-y también hice que el método area sea abstracto
+Creé una clase nueva llamada Circulo que extiende Shape
+y definí su propio método area usando la fórmula del círculo
+pi * radio al cuadrado
+Sobrescribí el constructor en la clase Circulo para que solo reciba un argumento en vez de dos
 
-Después creé dos subclases
-una llamada Triangle que calcula el área como base por altura dividido por 2
-y otra llamada Rectangle que multiplica ancho por alto
+para que solo reciba un argumento en vez de dos
+La clase base Shape pide ancho y alto
+usé solo el ancho como si fuera el radio del círculo
+y pasé cero como altura pero no se usa en el cálculo
 
-En index.php creé un triángulo y un rectángulo con los mismos valores
+No cambié nada de las clases anteriores y sólo agregué una nueva
 
-hice uso de clases abstractas para forzar estructura
-herencia para compartir propiedades entre formas
-polimorfismo para que cada forma tenga su cálculo propio
+herencia para reutilizar estructura
+polimorfismo para tener diferentes formas de calcular área
+uso de pi y pow para fórmulas matemáticas
