@@ -1,18 +1,15 @@
 <?php
-require_once 'ShapeInterface.php';
+    require_once 'ShapeInterface.php';
 
-// implementa a interface ShapeInterface
-class Circulo implements ShapeInterface {
-    private $raio;
+    class Circulo implements ShapeInterface {
+        private $raio;
 
-    // Construtor recebe o raio
-    public function __construct($raio) {
-        $this->raio = $raio;
+        public function __construct($raio) {
+            $this->raio = $raio;
+        }
+
+        public function area() {
+            return pi() * pow($this->raio, 2);
+        }
     }
-
-    // implemento de area() pro círculo ok
-    public function area() {
-        return pi() * pow($this->raio, 2);
-    }
-}
 ?>
