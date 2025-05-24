@@ -1,0 +1,13 @@
+{
+    "name": "leand/ejercicio1",
+    "description": "Exercici de prova amb Composer i Carbon",
+    "authors": [
+        {
+            "name": "leandrodsg",
+            "email": "leandrodsg.pt@gmail.com"
+        }
+    ],
+    "require": {
+        "nesbot/carbon": "^3.9"
+    }
+}
