@@ -8,10 +8,8 @@
     use App\Libro;
     use App\Libreria;
 
-    // testes da biblioteca
     class LibreriaTest extends TestCase
     {
-        // livro pode ser adicionado e recuperado ok
         public function testAdicionarLivro()
         {
             $libreria = new Libreria();
@@ -24,7 +22,6 @@
             $this->assertEquals("1984", $todos["111"]->getTitulo());
         }
 
-        // livro pode ser  removido corretamente ok
         public function testRemoverLivro()
         {
             $libreria = new Libreria();
@@ -37,7 +34,6 @@
             $this->assertArrayNotHasKey("222", $libreria->obterLivros());
         }
 
-        // modificar os dados de um livro
         public function testModificarLivro()
         {
             $libreria = new Libreria();
@@ -51,7 +47,6 @@
             $this->assertEquals("Autor B", $modificado->getAutor());
         }
 
-        // testar a busca por titulo ok
         public function testBuscarPorTitulo()
         {
             $libreria = new Libreria();
@@ -64,7 +59,6 @@
             $this->assertEquals("Neil Gaiman", $resultado[0]->getAutor());
         }
 
-        // testar livros com mais de 500 ok
         public function testLivrosGrandes()
         {
             $libreria = new Libreria();

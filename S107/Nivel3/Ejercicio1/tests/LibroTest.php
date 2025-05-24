@@ -6,11 +6,9 @@
 
     use App\Libro;
 
-    // teste da entidade Livro
     class LibroTest extends TestCase
     {
         /**
-         * testa livros com diferentes dados
          * @dataProvider livrosExemplo
          */
         public function testCriacaoLivro($titulo, $autor, $isbn, $genero, $paginas)
@@ -24,7 +22,6 @@
             $this->assertEquals($paginas, $livro->getPaginas(), "Erro nas páginas");
         }
 
-        // dados para testar diferentes livros
         public static function livrosExemplo()
         {
             return [
