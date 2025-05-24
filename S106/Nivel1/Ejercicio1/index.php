@@ -7,7 +7,7 @@
 </head>
 <body>
     <section>
-        <!-- dados para o procesar.php -->
+        
         <form action="procesar.php" method="POST">
 
             <label for="nombre">Nombre</label>

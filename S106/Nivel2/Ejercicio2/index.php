@@ -2,7 +2,6 @@
 
 require_once __DIR__ . '/classes/Car.php';
 
-// criar o carro ok 
 $meuCarro = new Car(
     'Fiat',
     'ABC-1234',
@@ -10,10 +9,8 @@ $meuCarro = new Car(
     180
 );
 
-// resumo do carro ok
-echo "Especificações do Veículo\n";
+echo "Especificaciones del vehículo\n";
 $meuCarro->mostrarEspecificacoes();
 
-// modo turbo ok
-echo "\nAtivando modo turbo:\n";
+echo "\nActivar el modo turbo:\n";
 $meuCarro->ativarTurbo();
