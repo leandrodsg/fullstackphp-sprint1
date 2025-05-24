@@ -1,0 +1,51 @@
+<?php
+
+    namespace App;
+
+    // livro da biblioteca
+    class Libro
+    {
+        // dados dos livros
+        private $titulo;
+        private $autor;
+        private $isbn;
+        private $genero;
+        private $paginas;
+
+        // livros com as informacoes
+        public function __construct($titulo, $autor, $isbn, $genero, $paginas)
+        {
+            $this->titulo = $titulo;
+            $this->autor = $autor;
+            $this->isbn = $isbn;
+            $this->genero = $genero;
+            $this->paginas = $paginas;
+        }
+
+        //metodo get
+        public function getTitulo()
+        {
+            return $this->titulo;
+        }
+
+        public function getAutor()
+        {
+            return $this->autor;
+        }
+
+        public function getIsbn()
+        {
+            return $this->isbn;
+        }
+
+        public function getGenero()
+        {
+            return $this->genero;
+        }
+
+        public function getPaginas()
+        {
+            return $this->paginas;
+        }
+    }
+?>
