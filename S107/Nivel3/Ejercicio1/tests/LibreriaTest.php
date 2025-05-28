@@ -8,10 +8,8 @@
     use App\Libro;
     use App\Libreria;
 
-    // testes da biblioteca
     class LibreriaTest extends TestCase
     {
-        // livro pode ser adicionado e recuperado ok
         public function testAdicionarLivro()
         {
             $libreria = new Libreria();
@@ -24,7 +22,6 @@
             $this->assertEquals("1984", $todos["111"]->getTitulo());
         }
 
-        // livro pode ser  removido corretamente ok
         public function testRemoverLivro()
         {
             $libreria = new Libreria();
@@ -37,7 +34,6 @@
             $this->assertArrayNotHasKey("222", $libreria->obterLivros());
         }
 
-        // modificar os dados de um livro
         public function testModificarLivro()
         {
             $libreria = new Libreria();
@@ -51,7 +47,6 @@
             $this->assertEquals("Autor B", $modificado->getAutor());
         }
 
-        // testar a busca por titulo ok
         public function testBuscarPorTitulo()
         {
             $libreria = new Libreria();
@@ -64,7 +59,6 @@
             $this->assertEquals("Neil Gaiman", $resultado[0]->getAutor());
         }
 
-        // testar livros com mais de 500 ok
         public function testLivrosGrandes()
         {
             $libreria = new Libreria();
@@ -79,7 +73,7 @@
             $this->assertCount(1, $grandes);
             $this->assertEquals("Grande", $grandes[0]->getTitulo());
         }
-        // testar add dois livros com mesmo titulo e isbn dif
+        
         public function testAdicionarLivrosComMesmoTitulo()
         {
             $libreria = new Libreria();
@@ -93,7 +87,7 @@
             $this->assertCount(2, $resultados);
         }
 
-        // testar remover livro que nao existe
+        
         public function testRemoverLivroInexistente()
         {
             $libreria = new Libreria();
@@ -101,7 +95,7 @@
             $this->assertFalse($resultado);
         }
 
-        // testar buscar por genero que nao existe
+
         public function testBuscarGeneroInvalido()
         {
             $libreria = new Libreria();
@@ -112,7 +106,7 @@
             $this->assertEmpty($resultados);
         }
 
-        // testar add livro com pag < 0
+        
         public function testLivroComPaginasNegativas()
         {
             $libreria = new Libreria();
@@ -124,7 +118,7 @@
             $this->assertEquals(-20, $adicionados["998"]->getPaginas());
         }
 
-        // testar add livro campos vazios
+        
         public function testLivroComCamposVazios()
         {
             $libreria = new Libreria();
@@ -138,7 +132,7 @@
             $this->assertEquals("", $adicionados["997"]->getGenero());
         }
 
-        // testar add livro com genero fora da lista
+        
         public function testGeneroNaoListato()
         {
             $libreria = new Libreria();
@@ -150,7 +144,7 @@
             $this->assertCount(1, $encontrado);
         }
 
-        // testar buscar por autor que nnao existe
+        
         public function testBuscarAutorInexistente()
         {
             $libreria = new Libreria();

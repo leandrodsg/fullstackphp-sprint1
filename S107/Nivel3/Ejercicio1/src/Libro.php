@@ -2,17 +2,14 @@
 
     namespace App;
 
-    // livro da biblioteca
     class Libro
     {
-        // dados dos livros
         private $titulo;
         private $autor;
         private $isbn;
         private $genero;
         private $paginas;
 
-        // livros com as informacoes
         public function __construct($titulo, $autor, $isbn, $genero, $paginas)
         {
             $this->titulo = $titulo;
@@ -22,7 +19,6 @@
             $this->paginas = $paginas;
         }
 
-        //metodo get
         public function getTitulo()
         {
             return $this->titulo;
